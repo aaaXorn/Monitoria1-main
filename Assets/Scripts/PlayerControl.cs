@@ -40,7 +40,11 @@ public class PlayerControl : MonoBehaviour
 			Touch touch = Input.GetTouch(0);
 
 			if(touch.phase == TouchPhase.Began)
-				print("toque comecou");
+				print("toque began");
+			else if(touch.phase == TouchPhase.Moved)
+				print("toque moved");
+			else if(touch.phase == TouchPhase.Ended)
+				print("toque ended");
         }
     }
 	
